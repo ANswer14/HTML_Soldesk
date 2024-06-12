@@ -1,0 +1,58 @@
+@charset "EUC-KR";
+
+#secondArea td{
+	font-size: 50pt;
+	text-align: center;
+	
+}
+
+#forthArea td{
+	font-size: 50pt;
+	text-align: center;
+}
+
+#aimage img{
+	max-width: 200px;
+	max-height: 200px;
+	box-shadow: navy 0px 0px 3px;
+}
+
+#aimage video{
+	max-width: 200px;
+	max-height: 200px;
+	box-shadow: navy 0px 0px 3px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
