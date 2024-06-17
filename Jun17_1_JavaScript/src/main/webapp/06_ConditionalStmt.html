@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	/*function kkkk() {
+		alert('ㅋㅋㅋㅋㅋㅋ');		
+	}*/ 
+	
+	// 1. 버튼 3개를 추가해서 각각 '100원', '500원', '1000원' 텍스트 넣기
+	// 2. 각 버튼에 기능 넣기
+	// 3.
+	//		500원 미만이면 '선택할 수 있는 음료수 없음!'
+	//		500원 이상이면 '콜라 선택 가능'
+	//		700원 이상이면 '콜라, 사이다 선택 가능'
+	//		1000원 이상이면 '콜라, 사이다, 닥터페퍼 선택 가능'
+	//		2000원 이상이면 '콜라, 사이다, 닥터페퍼, 맥주 선택 가능'
+	//		3000원 이상이면 '콜라, 사이다, 닥터페퍼, 맥주, 소주 선택 가능'
+	// 4. 돈 쌓이는거 log로 확인
+		let insertMoney = 0;
+	function insertCoin(m){
+		insertMoney += m;
+		console.log(`현재 금액 : ${insertMoney}원`);
+	}
+	
+	function check(){
+		if(insertMoney < 500) {
+		alert('선택할 수 있는 음료수 없음!');
+		}else if (insertMoney < 700) {
+			alert('콜라 선택 가능');
+		}else if (insertMoney < 1000) {
+			alert('콜라, 사이다 선택 가능');
+		}else if (insertMoney < 2000) {
+			alert('콜라, 사이다, 닥터페퍼 선택가능');
+		}else if (insertMoney < 3000) {
+			alert('콜라, 사이다, 닥터페퍼, 맥주 선택가능');
+		}else {
+		alert('모두 선택 가능');
+		}
+		
+		buy();
+	}
+	
+	function buy(){
+		/* let beverage = prompt('구매할 품목 입력');
+		if (insertMoney >= 500 && beverage === '콜라') {
+			alert('성공');
+			insertMoney -= 500;
+			console.log(insertMoney);
+		}
+		else if (insertMoney >= 700 && beverage === '사이다') {
+			alert('성공');
+			insertMoney -= 700;
+			console.log(insertMoney);
+		}
+		else if (insertMoney >= 1000 && beverage === '닥터페퍼') {
+			alert('성공');
+			insertMoney -= 1000;
+			console.log(insertMoney);
+		}
+		else if (insertMoney >= 2000 && beverage === '맥주') {
+			alert('성공');
+			insertMoney -= 2000;
+			console.log(insertMoney);
+		}
+		else if (insertMoney >= 3000 && beverage === '소주') {
+			alert('성공');
+			insertMoney -= 3000;
+			console.log(insertMoney);
+		}else {
+			alert('실패');
+		} */
+		a : while (true) {
+			if (insertMoney < 500) {
+				break a;
+			}
+			
+			let beverage = prompt('뽑을 음료를 골라주세요', '멈춰');
+			switch (beverage) {
+			case "콜라":
+				if (insertMoney < 500) {
+					alert('돈이 부족합니다.');
+					break;
+				}
+				alert(`${beverage}를 선택했습니다. ${insertMoney}에서 500원을 차감합니다.`);
+				insertMoney -= 500;
+				console.log('현재 금액 : ' + insertMoney + '원');
+				break;
+			case "사이다":
+				if (insertMoney < 700) {
+					alert('돈이 부족합니다.');
+					break;
+				}
+				alert(`${beverage}를 선택했습니다. ${insertMoney}에서 700원을 차감합니다.`);
+				insertMoney -= 700;
+				console.log('현재 금액 : ' + insertMoney + '원');
+				break;
+			case "닥터페퍼":
+				if (insertMoney < 1000) {
+					alert('돈이 부족합니다.');
+					break;
+				}
+				alert(`${beverage}를 선택했습니다. ${insertMoney}에서 1000원을 차감합니다.`);
+				insertMoney -= 1000;
+				console.log('현재 금액 : ' + insertMoney + '원');
+				break;
+			case "맥주":
+				if (insertMoney < 2000) {
+					alert('돈이 부족합니다.');
+					break;
+				}
+				alert(`${beverage}를 선택했습니다. ${insertMoney}에서 2000원을 차감합니다.`);
+				insertMoney -= 2000;
+				console.log('현재 금액 : ' + insertMoney + '원');
+				break;
+			case "소주":
+				if (insertMoney < 3000) {
+					alert('돈이 부족합니다.');
+					break;
+				}
+				alert(`${beverage}를 선택했습니다. ${insertMoney}에서 3000원을 차감합니다.`);
+				insertMoney -= 3000;
+				console.log('현재 금액 : ' + insertMoney + '원');
+				break;
+			case "멈춰":
+				alert("잠시 멈춤");
+				break a;
+			default:
+				alert(`${beverage}는 없습니다. 다시 선택해주세요.`);
+				break;
+			}
+			
+		}
+	}
+	
+	function refund(){
+		if (insertMoney == 0) {
+			alert('환불한 돈이 없습니다')
+			return;
+		}
+	
+		let refundMoney = confirm(insertMoney + "원을 환불하시겠습니까 ?");
+		if (refundMoney) {
+			console.log(insertMoney + "원이 환불됩니다.");
+			insertMoney = 0;
+			console.log("현재 금액 : " + insertMoney + "원");
+			
+		}
+	}
+	
+	
+	
+</script>
+</head>
+<body><!-- onclick : 클릭했을 때-- -->
+	<!-- <button onclick="kkkk();">ㅋㅋㅋㅋㅋㅋ</button> -->
+	<button onclick= "insertCoin(100);">100원</button>
+	<button onclick= "insertCoin(500);">500원</button>
+	<button onclick= "insertCoin(1000);">1000원</button>
+	<div>
+		<div align="center">자판기</div>
+		<div align="center">
+			<div>🥤콜라 : 500원</div>
+			<div>🥤사이다 : 700원</div>
+			<div>🥤닥터페퍼 : 1000원</div>
+			<div>🍺맥주 : 2000원</div>
+			<div>🍾소주 : 3000원</div>
+		</div>
+	</div>
+	<button onclick= "check();">확인</button>
+	<button onclick= "refund();">돈빼기</button>
+	<hr>
+</body>
+</html>
