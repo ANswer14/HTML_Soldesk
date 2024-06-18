@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript"src="js/LyhValidChecker.js"></script>
+<script type="text/javascript"src="js/Jun18_Check.js"></script>
+<link rel="stylesheet" href="css/BMIInput.css">
+</head>
+<body>
+	<!-- 
+		form + table 활용
+		BMI 검사
+		bmi : 몸무게 / (키 * 키) -- 키는 m단위
+			bmi가 18.5미만이면 저체중
+			18.5이상이면 정상
+			25이상이면 과체중
+			30이상이면 경도비만
+			35이상이면 중증도비만
+			40이상이면 고도비만
+		
+		(이름, 키(cm), 몸무게(kg), 사진) => 버튼을 누르면
+			=> 유효성 검사 실시 => 유효한 데이터라면...
+			=> 	이름, 키, 몸무게, bmi수치, 결과, 사진 을 servlet으로 출력
+			+ html(+CSS) / servlet(CSS X) 
+	 -->
+	 <form action="BMIOutput.jsp" enctype="multipart/form-data" method="post"
+	 name="bmiForm" onsubmit="return bmiCheck();">
+	 <table>
+		 <tr>
+		 	<td align="center">
+				이름 <input name="name"><p>
+			</td>
+		</tr>
+		<tr>
+			<td align="center">
+			 	키(cm)<input type="text" name="height"><p>
+			</td>
+		</tr>
+		<tr>
+			<td align="center">
+			 	몸무게(kg)<input type="text" name="weight"><p>
+			</td>
+		</tr>
+		<tr>
+			<td align="center">
+ 			 	사진 선택<input type="file" name="img"><p>
+			</td>
+		</tr>
+		<tr>
+			<td align="center" id="button">
+			 	<button>확인</button>
+			</td>
+		</tr>
+	 </table>
+	 </form>
+</body>
+</html>
