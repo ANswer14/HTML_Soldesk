@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="css/v1.css"></link>
+<script type="text/javascript" src="js/Jun18_Check.js"></script>
+<script type="text/javascript" src="js/LyhValidChecker.js"></script>
+</head>
+<body>
+	<form action="HomeController" id="form" name="bmiform" method="post" onsubmit="return bmiCheck();" 
+	enctype="multipart/form-data">
+		이름<input name="name"><p>
+		키(cm)<input name="height"><p>
+		몸무게(kg)<input name="weight"><p>
+		사진<input type="file" name="img">
+		<hr>
+		<button id ="button">확인</button>
+	</form>
+</body>
+</html>
