@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+body{
+	background-color: pink;
+	margin: auto;
+	width : 60%;
+
+}
+
+body h1 {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+#tbl1 th {
+	text-align: left;
+	background-color: transparent;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+

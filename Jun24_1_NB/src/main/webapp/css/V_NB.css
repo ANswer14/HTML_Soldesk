@@ -1,0 +1,78 @@
+@charset "UTF-8";
+
+
+body {
+	background-image: url("baseball.jpg");
+	background-repeat: repeat-y;
+	background-position: center;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#tbl1,#tbl2 {
+	margin: auto;
+	max-width: 100%;
+	color: black;
+}
+
+#input {
+	background-color: transparent;
+}
+#formtd {
+	border: white solid 3px;
+	border-radius: 10px;
+	font-size: 20pt;
+	outline: none;
+	text-align: center;
+	background-color: transparent;
+	color: black;
+}
+
+#ex {
+	text-decoration: none;
+	outline: none;
+	border: white solid 1px;
+	background-color: transparent;
+}
+
+#tbl2 {
+	margin-top: 100px;
+}
+
+#tbl2 th {
+	font-size: 60pt;
+	text-shadow: pink 3px 3px 5px;
+	height : 100px
+}
+
+button {
+	width: 400px;
+	height: 40px;
+	background-color: transparent;
+	font-size: 15pt;
+	color: black;
+	border-color: black;
+}
+
+#result1 {
+	font-size: 30px;
+}
+
+#answer1 {
+	font-size: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
