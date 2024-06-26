@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+
+#appleTbl td{
+	text-align: center;
+	border-style: solid;
+	background-color: #F6F6F6;
+	color: #5CD1E5;
+	border-color: white;
+}
+
+
+#appleTbl th{
+	text-align: center;	
+	border-style: solid;
+	background-color: pink;
+	border-color: pink;
+	color: #747474;
+	text-shadow: 4px 4px 6px silver;
+	
+}
+
+#appleTbl {
+	margin-top: 100px;
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	font-family:"haenam";
+	font-size: 40pt;
+	color: white; 
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 40px;
+	padding-right: 40px;
+	border-color: pink;
+	border-style: dashed;
+	
+}
+
+#appleBody {
+	background-image: url("apple.jpg");
+}
+
+
+	
